@@ -6,7 +6,6 @@ public class QnA_struct {
     private String sQuestion;
     private String sAnswer;
     private List<String> sMultiOptions;
-    private int iDifficulty; // 0 - EASY 1 - MODERATE 2 - DIFFICULT
     private int iHitCounter;
 
 
@@ -18,9 +17,7 @@ public class QnA_struct {
         iHitCounter++;
     }
 //
-    public int  getDiffLevel(){
-        return iDifficulty;
-    }
+
 //
     public String getAnswer(){
         return sAnswer;

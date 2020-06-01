@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,7 +19,10 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 
 public class GameActivity extends AppCompatActivity {
@@ -37,45 +41,40 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        Quizpartdisplay();
+        List<Integer> easyQidx = pickQuestionsForQuiz(6, MainActivity.QuizQuestionsEasy);
+        List<Integer> moderateQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsMedium);
+//        List<Integer> difficultQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsDifficult);
     }
 
-    public void Quizpartdisplay()  {
-        QnA_struct [] questions;
-        String jsonFile = loadJSONFromAsset();
-        Gson gson = new Gson();
-
-        questions = gson.fromJson(jsonFile, QnA_struct[].class);
-
-
-        String question = questions[0].getQuestion();
-        List<String> multiOptions  = questions[0].sMultiOptions();
-        String answer = questions[0].getAnswer();
-        int hitCounter = questions[0].getHitCounter();
-        int diffLevel = questions[0].getDiffLevel();
-
-        String question1 = questions[1].getQuestion();
-        List<String> multiOptions1  = questions[1].sMultiOptions();
-        String answer1 = questions[1].getAnswer();
-        int hitCounter1 = questions[1].getHitCounter();
-        int diffLevel1 = questions[1].getDiffLevel();
-    }
-
-    public String loadJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream is = getAssets().open("covid19_questions.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
+    public List<Integer> pickQuestionsForQuiz(int numOfQuestions, List<QnA_struct> QnA){
+        List<Integer> idxQnA = new ArrayList<Integer>();
+        //Fetch Index for Easy Questions
+        Collections.shuffle(QnA);
+        int hitCount = 0;
+        while(true) {
+            int idx=0;
+            while(true){
+                if (QnA.get(idx).getHitCounter() == hitCount) {
+                    idxQnA.add(idx);
+                    QnA.get(idx).incHitCounter();
+                }
+                if (QnA.get(idx).getHitCounter() == 6) {
+                    hitCount = 0;
+                    QnA.get(idx).resetHitCounter();
+                }
+                if(idx == idxQnA.size())
+                    break;
+                if(idxQnA.size() == numOfQuestions)
+                    break;
+                idx++;
+            }
+            if(idxQnA.size() == numOfQuestions)
+                break;
+            hitCount++;
         }
-        return json;
+        return idxQnA;
     }
+
 
     public void Mathpartdisplay(){
 
