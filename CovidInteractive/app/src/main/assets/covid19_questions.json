@@ -1,0 +1,25 @@
+[
+   {
+      "sQuestion":"How did Modi JI handle covid19 situation in India?",
+      "sAnswer":"The Best",
+	  "sMultiOptions": [
+			"The Best",
+			"Not handled properly",
+			"Could have been better"
+	  ],
+	  "iDifficulty": 0,
+	  "iHitCounter": 0
+   },
+
+   {
+      "sQuestion":"Test Question - 1?",
+      "sAnswer":"The Best",
+	  "sMultiOptions": [
+			"a",
+			"b",
+			"c"
+	  ],
+	  "iDifficulty": 0,
+	  "iHitCounter": 0	  
+   }
+]
