@@ -6,7 +6,9 @@ import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -37,6 +39,7 @@ public class GameActivity extends AppCompatActivity {
     private RadioButton radioButton4;
     private Button submitbutton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +47,24 @@ public class GameActivity extends AppCompatActivity {
         List<Integer> easyQidx = pickQuestionsForQuiz(6, MainActivity.QuizQuestionsEasy);
         List<Integer> moderateQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsMedium);
 //        List<Integer> difficultQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsDifficult);
+
+        displayQuizTop(easyQidx, moderateQidx);
     }
 
+    public void displayQuizTop(List<Integer> easyQidx, List<Integer>moderateQidx){
+
+        EditText quizQuestion = (EditText)findViewById(R.id.editText9);
+        RadioButton multiChoiceA = (RadioButton) findViewById(R.id.radioOptionA);
+        RadioButton multiChoiceB = (RadioButton) findViewById(R.id.radioOptionB);
+        RadioButton multiChoiceC = (RadioButton) findViewById(R.id.radioOptionC);
+
+        quizQuestion.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).getQuestion());
+        Collections.shuffle(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions());
+        multiChoiceA.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions().get(0));
+        multiChoiceB.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions().get(1));
+        multiChoiceC.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions().get(2));
+
+    }
     public List<Integer> pickQuestionsForQuiz(int numOfQuestions, List<QnA_struct> QnA){
         List<Integer> idxQnA = new ArrayList<Integer>();
         //Fetch Index for Easy Questions
