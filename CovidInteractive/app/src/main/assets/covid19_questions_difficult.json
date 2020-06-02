@@ -1,101 +1,71 @@
 [
    {
-      "sQuestion":"Test HARD Question - 1?",
-      "sAnswer":"a",
+      "sQuestion":"When was COVID-19 first reported to WHO ?",
+      "sAnswer":"31st Dec 2019",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "31st Dec 2019",
+         "22nd Dec 2019",
+         "13th Dec 2019"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test HARD Question - 2?",
-      "sAnswer":"b",
+      "sQuestion":"When did WHO declare COVID-19 as Public Health Emergency of International concern ?",
+      "sAnswer":"30th Jan 2020",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "31st Dec 2019",
+         "30th Jan 2020",
+         "15th Jan 2020"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test HARD Question - 3?",
-      "sAnswer":"c",
+      "sQuestion":"How long does COVID-19 virus surview on copper ?",
+      "sAnswer":"upto 4 hour",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "upto 4 hour",
+         "upto 72 hour",
+         "lessthan 24 hour"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test HARD Question - 3?",
-      "sAnswer":"c",
+      "sQuestion":"How long does COVID-19 virus surview on cardboard ?",
+      "sAnswer":"lessthan 24 hour",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "lessthan 24 hour",
+         "upto 72 hour",
+         "upto 4 hour"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test HARD Question - 5?",
-      "sAnswer":"c",
+      "sQuestion":"what is the name of Virus that causes COVID19 ?",
+      "sAnswer":"SARS-CoV-2",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "SARS-CoV-2",
+         "SARS-CoV-3",
+         "SARS-CoV-4"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test HARD Question - 6?",
-      "sAnswer":"c",
+      "sQuestion":"Who is the First Doctor to warn on COVID-19 ?",
+      "sAnswer":"LI-Wenliang",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "LI-Wenliang",
+         "ki-hu",
+         "li-hang"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test HARD Question - 7?",
-      "sAnswer":"c",
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"Drinking methanol and ethanol doesn't cure COVID-19",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
-      ],
-      "iHitCounter":0
-   },
-   {
-      "sQuestion":"Test HARD Question - 8?",
-      "sAnswer":"c",
-      "sMultiOptions":[
-         "a",
-         "b",
-         "c"
-      ],
-      "iHitCounter":0
-   },
-   {
-      "sQuestion":"Test HARD Question - 9?",
-      "sAnswer":"c",
-      "sMultiOptions":[
-         "a",
-         "b",
-         "c"
-      ],
-      "iHitCounter":0
-   },
-   {
-      "sQuestion":"Test HARD Question - 10?",
-      "sAnswer":"c",
-      "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Drinking methanol and ethanol doesn't cure COVID-19",
+         "Drinking methanol and ethanol will cure COVID-19",
+         "Drinking methanol and ethanol will make sure we will not get COVID-19"
       ],
       "iHitCounter":0
    }

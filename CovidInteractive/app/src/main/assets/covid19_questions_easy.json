@@ -1,101 +1,171 @@
 [
    {
-      "sQuestion":"Test EASY Question - 1?",
-      "sAnswer":"a",
+      "sQuestion":"From which did the COVID originate ?",
+      "sAnswer":"Wuhan",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Wuhan",
+         "Beijing",
+         "Fuyang"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 2?",
-      "sAnswer":"b",
+      "sQuestion":"what is the name for the new CoronaVirus disease reported on 31st Dec 2019 to WHO ?",
+      "sAnswer":"COVID19",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "COVID19",
+         "COVID20",
+         "COVID18"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 3?",
-      "sAnswer":"c",
+      "sQuestion":"COVID19 virus will not spread by ?",
+      "sAnswer":"Social Distancing",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Social Distancing",
+         "coughing",
+         "Close Contact"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 3?",
-      "sAnswer":"c",
+      "sQuestion":"General Incubation period of COVID19 ?",
+      "sAnswer":"range of 1-14 days",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "range of 1-14 days",
+         "range of 1-20 days",
+         "range of 1-70 days"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 5?",
-      "sAnswer":"c",
+      "sQuestion":"Which of the following is not complication of COVID19 ?",
+      "sAnswer":"Heart-Attack",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Pneumonia",
+         "Heart-Attack",
+         "Kidney failure"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 6?",
-      "sAnswer":"c",
+      "sQuestion":"Which of the following is not preventive measure for avoiding COVID19 ?",
+      "sAnswer":"Hugging",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Hugging",
+         "Hand wash",
+         "Quarantine"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 7?",
-      "sAnswer":"c",
+      "sQuestion":"Which country has More COVID case as of May ?",
+      "sAnswer":"USA",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "USA",
+         "INDIA",
+         "CHINA"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 8?",
-      "sAnswer":"c",
+      "sQuestion":"what does COVID stands for ?",
+      "sAnswer":"Corona Virus Disease",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Corona Virus Disease",
+         "Combo virus Disease",
+         "Corona Virtual Disease"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 9?",
-      "sAnswer":"c",
+      "sQuestion":"can people recover from COVID19 ?",
+      "sAnswer":"Yes",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Yes",
+         "No",
+         "Maybe"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test EASY Question - 10?",
-      "sAnswer":"c",
+      "sQuestion":"who names COVID19 ?",
+      "sAnswer":"WHO",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "WHO",
+         "CHINA",
+         "USA"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"what was the first name of new coron virsu found on December 2019 ?",
+      "sAnswer":"2019-nCoV",
+      "sMultiOptions":[
+         "SARS-CoV-2",
+         "2019-nCoV",
+         "SARS-CoV"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"When you go for market you should wear following to avoid COVID19 spread ?",
+      "sAnswer":"Mask",
+      "sMultiOptions":[
+         "Shoes",
+         "Watches",
+         "Mask"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"In which country COVID19 case was initially found ?",
+      "sAnswer":"CHINA",
+      "sMultiOptions":[
+         "USA",
+         "CHINA",
+         "ITALY"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Following method you have to follow when you are in public places to prevent contracting COVID-19 ?",
+      "sAnswer":"Social Distancing",
+      "sMultiOptions":[
+         "Social Distancing",
+         "shaking hand",
+         "hugging"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Following preventive measure you have to follow when you touch items outside ?",
+      "sAnswer":"wash hand with sanitizer",
+      "sMultiOptions":[
+         "wash hand with sanitizer",
+         "touch face with hand",
+         "touch face with eye"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"Most people who get COVID19 will recover from it",
+      "sMultiOptions":[
+         "people who get COVID19 will die",
+         "Most people who get COVID19 will recover from it",
+         "people who get COVID19 will suffer lifelong"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"use of Hand driers will kill COVID19 Virus ?",
+      "sAnswer":"yes",
+      "sMultiOptions":[
+         "yes",
+         "no",
+         "maybe"
       ],
       "iHitCounter":0
    }

@@ -1,101 +1,171 @@
 [
    {
-      "sQuestion":"Test MEDIUM Question - 1?",
-      "sAnswer":"a",
+      "sQuestion":"what is Global Recovery rate of COVID-19 ?",
+      "sAnswer":"around 80%",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "around 80%",
+         "around 90%",
+         "around 100%"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 2?",
-      "sAnswer":"b",
+	  "sQuestion":"How long does it take to develop symptoms after contracting COVID 19 ?",
+	  "sAnswer":"upto 72 hour",
+	  "sMultiOptions":[
+		 "upto 72 hour",
+		 "upto 4 hour",
+		 "lessthan 24 hour"
+	  ],
+	  "iHitCounter":0
+   },
+   {
+      "sQuestion":"Does Antibiotic help in curing COVID19 ?",
+      "sAnswer":"No",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "No",
+         "Yes",
+         "Maybe"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 3?",
-      "sAnswer":"c",
+      "sQuestion":"Following is not symptom of covid 19 ?",
+      "sAnswer":"Hair fall",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "fatigue",
+         "difficulty in breathe",
+         "Hair fall"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 3?",
-      "sAnswer":"c",
+      "sQuestion":"Recommended distance between people to avoid COVID19 ?",
+      "sAnswer":"Within 1-2m",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "less than 1m",
+         "Within 1-2m",
+         "close contact"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 5?",
-      "sAnswer":"c",
+      "sQuestion":"Whats does SARS stands for ?",
+      "sAnswer":"Severe acute respiratory Syndrome",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Severe acute respiratory Syndrome",
+         "Severe acute reverse Syndrome",
+         "Severe agile respiratory Syndrome"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 6?",
-      "sAnswer":"c",
+      "sQuestion":"what is COVID ?",
+      "sAnswer":"Virus",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Virus",
+         "Bacteria",
+         "Fungus"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 7?",
-      "sAnswer":"c",
+      "sQuestion":"which of the following animal is high susceptible to COVID19 ?",
+      "sAnswer":"CAT",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "CAT",
+         "DONKEY",
+         "HORSE"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 8?",
-      "sAnswer":"c",
+      "sQuestion":"Which is highly effected country in Europe due to COVID19 ?",
+      "sAnswer":"ITALY",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "ITALY",
+         "FRANCE",
+         "GERMANY"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 9?",
-      "sAnswer":"c",
+      "sQuestion":"will weather play role in spread of COVID-19 ?",
+      "sAnswer":"No",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Yes",
+         "No",
+         "Maybe"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Test MEDIUM Question - 10?",
-      "sAnswer":"c",
+      "sQuestion":"will weather play role in spread of COVID-19 ?",
+      "sAnswer":"No",
       "sMultiOptions":[
-         "a",
-         "b",
-         "c"
+         "Yes",
+         "No",
+         "Maybe"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"Drinking Alcohol doesn't cure COVID-19",
+      "sMultiOptions":[
+         "Drinking Alcohol doesn't cure COVID-19",
+         "Drinking Alcohol will cure COVID-19",
+         "Drinking Alcohol will make sure we will not get COVID-19"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"Thermal scanners cannot detect COVID-19",
+      "sMultiOptions":[
+         "Thermal scanners cannot detect COVID-19",
+         "Thermal scanners will detect COVID-19",
+         "Thermal scanners will detect and cure COVID-19"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"Adding pepper to soup and meal will not help to prevent COVID-19",
+      "sMultiOptions":[
+         "Adding pepper to soup and meal will not help to prevent COVID-19",
+         "Adding pepper to soup and meal will help to prevent COVID-19",
+         "Adding pepper to soup and meal will help to cure COVID-19"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"5G mobile network do not spread COVID-19",
+      "sMultiOptions":[
+         "5G mobile network do not spread COVID-19",
+         "5G mobile network will spread COVID-19",
+         "5G mobile network will help grow COVID-19"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"COVID 19 can be transmitted in areas with hot and humid climates",
+      "sMultiOptions":[
+         "COVID 19 can be transmitted in areas with hot and humid climates",
+         "COVID 19 cannot be transmitted in areas with hot and humid climates",
+         "hot and humid climates kill COVID 19 virus"
+      ],
+      "iHitCounter":0
+   },
+   {
+      "sQuestion":"Pick the right statement from following",
+      "sAnswer":"Cold weather and snow cannot kill the COVID19 virus",
+      "sMultiOptions":[
+         "Cold weather and snow cannot kill the COVID19 virus",
+         "Cold weather and snow can kill the COVID19 virus",
+         "Cold weather and snow breed the COVID19 virus"
       ],
       "iHitCounter":0
    }
