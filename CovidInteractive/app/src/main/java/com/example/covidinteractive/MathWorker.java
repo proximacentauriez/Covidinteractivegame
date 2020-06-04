@@ -1,5 +1,8 @@
 package com.example.covidinteractive;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class MathWorker {
@@ -9,7 +12,9 @@ public class MathWorker {
     public static int int2;
     public static String operator;
     public static int answer;
-    public static int[] arr;
+    public static int[] arr = new int[4];
+
+    public static List<Integer> uniqueNumbers = new ArrayList<>();
     
     public void BottomPart() {
 
@@ -60,38 +65,54 @@ public class MathWorker {
                 operator = "*";
                 break;
         }
+        AddNumberToList(answer);
+        int ans1 = 0;
+        while (true) {
+            if(uniqueNumbers.size() == 4)
+                break;
+            ans1 = rand.nextInt(99);
 
-        int ans1 = rand.nextInt(9) + answer;
-        int ans2 = rand.nextInt(9) - answer;
-        int ans3 = rand.nextInt(9) * answer;
+            AddNumberToList(ans1);
 
-        int opt1 = rand.nextInt(3);
-        arr[opt1] = ans1;
 
-        int opt2 = rand.nextInt(3);
-
-        while (opt1 == opt2) {
-            opt2 = rand.nextInt(3);
         }
 
-        arr[opt2] = ans2;
+        Collections.shuffle(uniqueNumbers);
 
-        int opt3 = rand.nextInt(3);
 
-        while ((opt3 == opt2) || (opt1 == opt3) ) {
-            opt3 = rand.nextInt(3);
-        }
-
-        arr[opt3] = ans3;
-
-        int opt4 = rand.nextInt(3);
-
-        while ((opt4 == opt2) || (opt1 == opt4) || (opt3 == opt4) ) {
-            opt4 = rand.nextInt(3);
-        }
-
-        arr[opt4] = answer;
+//        int opt1 = rand.nextInt(3);
+//        arr[opt1] = ans1;
+//
+//        int opt2 = rand.nextInt(3);
+//
+//        while (opt1 == opt2) {
+//            opt2 = rand.nextInt(3);
+//        }
+//
+//        arr[opt2] = ans2;
+//
+//        int opt3 = rand.nextInt(3);
+//
+//        while ((opt3 == opt2) || (opt1 == opt3) ) {
+//            opt3 = rand.nextInt(3);
+//        }
+//
+//        arr[opt3] = ans3;
+//
+//        int opt4 = rand.nextInt(3);
+//
+//        while ((opt4 == opt2) || (opt1 == opt4) || (opt3 == opt4) ) {
+//            opt4 = rand.nextInt(3);
+//        }
+//
+//        arr[opt4] = answer;
 
     }
 
+    public void AddNumberToList(int num)
+    {
+        if(!uniqueNumbers.contains(num)) {
+            uniqueNumbers.add(num);
+        }
+    }
 }

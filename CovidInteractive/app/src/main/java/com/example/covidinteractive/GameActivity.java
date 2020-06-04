@@ -39,6 +39,7 @@ public class GameActivity extends AppCompatActivity {
     private RadioButton radioButton4;
     private Button submitbutton;
 
+    MathWorker MW = new MathWorker();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class GameActivity extends AppCompatActivity {
 //        List<Integer> difficultQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsDifficult);
 
         displayQuizTop(easyQidx, moderateQidx);
+        Mathpartdisplay();
     }
 
     public void displayQuizTop(List<Integer> easyQidx, List<Integer>moderateQidx){
@@ -94,12 +96,16 @@ public class GameActivity extends AppCompatActivity {
         return idxQnA;
     }
 
-
     public void Mathpartdisplay(){
 
+        MW.BottomPart();
+
         int int1gui = MathWorker.int1;
-//        String oper = Mathworker
         int int2gui = MathWorker.int2;
+
+        number1 = (TextView)findViewById(R.id.number1);
+        number2 = (TextView)findViewById(R.id.number2);
+        operator = (TextView)findViewById(R.id.operator);
 
         number1.setText(Integer.toString(int1gui));
         number2.setText(Integer.toString(int2gui));
@@ -107,10 +113,16 @@ public class GameActivity extends AppCompatActivity {
 
 //        RadioGroup TXMgroup = new RadioGroup();
 
-        radioButton1.setText(MathWorker.arr[0]);
-        radioButton2.setText(MathWorker.arr[1]);
-        radioButton3.setText(MathWorker.arr[2]);
-        radioButton4.setText(MathWorker.arr[3]);
+        radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
+        radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
+        radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
+        radioButton4 = (RadioButton) findViewById(R.id.radioButton4);
+
+        radioButton1.setText(Integer.toString(MathWorker.uniqueNumbers.get(0)));
+        radioButton2.setText(Integer.toString(MathWorker.uniqueNumbers.get(1)));
+        radioButton3.setText(Integer.toString(MathWorker.uniqueNumbers.get(2)));
+        radioButton4.setText(Integer.toString(MathWorker.uniqueNumbers.get(3)));
 
     }
+
 }
