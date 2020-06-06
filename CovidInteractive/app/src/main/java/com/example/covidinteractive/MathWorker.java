@@ -17,7 +17,7 @@ public class MathWorker {
     public static List<Integer> uniqueNumbers = new ArrayList<>();
     
     public void BottomPart() {
-
+        uniqueNumbers.clear();
         int var1, var2;
 
 //        String divide = "/";

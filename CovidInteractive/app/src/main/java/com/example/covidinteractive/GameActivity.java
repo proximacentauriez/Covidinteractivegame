@@ -3,9 +3,11 @@ package com.example.covidinteractive;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
@@ -42,7 +44,15 @@ public class GameActivity extends AppCompatActivity {
     private RadioButton radioButton3;
     private RadioButton radioButton4;
     private ProgressBar pb;
+    private EditText quizQuestion;
+    private RadioButton multiChoiceA;
+    private RadioButton multiChoiceB;
+    private RadioButton multiChoiceC;
+    private static final int NO_OF_QUESTIONS = 20;
+    private List<Integer> easyQidx,moderateQidx,difficultQidx;
 
+    private static List<QnA_struct> selectedQuizQuestions = new ArrayList<QnA_struct>();
+    private static int QnA_idx_cnt = 0;
 
     MathWorker MW = new MathWorker();
 
@@ -51,38 +61,66 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        pb = (ProgressBar)findViewById(R.id.progressBar5);
-        /*Animation*/
-        ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100,0);
-        animation.setDuration(5000);
-        animation.setInterpolator(new LinearInterpolator());
-        animation.start();
+        number1 = (TextView)findViewById(R.id.number1);
+        number2 = (TextView)findViewById(R.id.number2);
+        operator = (TextView)findViewById(R.id.operator);
 
-        List<Integer> easyQidx = pickQuestionsForQuiz(6, MainActivity.QuizQuestionsEasy);
-        List<Integer> moderateQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsMedium);
-//        List<Integer> difficultQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsDifficult);
+        radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
+        radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
+        radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
+        radioButton4 = (RadioButton) findViewById(R.id.radioButton4);
 
-        displayQuizTop(easyQidx, moderateQidx);
+        quizQuestion = (EditText)findViewById(R.id.editText9);
+        multiChoiceA = (RadioButton) findViewById(R.id.radioOptionA);
+        multiChoiceB = (RadioButton) findViewById(R.id.radioOptionB);
+        multiChoiceC = (RadioButton) findViewById(R.id.radioOptionC);
+
+        easyQidx = pickQuestionsForQuiz(10, MainActivity.QuizQuestionsEasy);
+        moderateQidx = pickQuestionsForQuiz(5, MainActivity.QuizQuestionsMedium);
+        difficultQidx = pickQuestionsForQuiz(5, MainActivity.QuizQuestionsDifficult);
+
+        updateUI();
+    }
+
+    public void updateUI() {
+        QnA_idx_cnt++;
+        displayQuizTop();
         Mathpartdisplay();
-       // displayProgressBar();
-
+        displayProgressBar();
+        new CountDownTimer(95000, 5000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                if (QnA_idx_cnt < NO_OF_QUESTIONS){
+                   displayQuizTop();
+                    Mathpartdisplay();
+                    displayProgressBar();
+                }
+            }
+            @Override
+            public void onFinish() {
+                Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        }.start();
 
     }
 
+    public void displayProgressBar() {
+         pb =(ProgressBar) findViewById(R.id.progressBar5);
+         /*Animation*/
+         ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100, 0);
+         animation.setDuration(5000);
+         animation.setInterpolator(new LinearInterpolator());
+         animation.start();
+    }
 
-    public void displayQuizTop(List<Integer> easyQidx, List<Integer>moderateQidx){
-
-        EditText quizQuestion = (EditText)findViewById(R.id.editText9);
-        RadioButton multiChoiceA = (RadioButton) findViewById(R.id.radioOptionA);
-        RadioButton multiChoiceB = (RadioButton) findViewById(R.id.radioOptionB);
-        RadioButton multiChoiceC = (RadioButton) findViewById(R.id.radioOptionC);
-
-        quizQuestion.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).getQuestion());
-        Collections.shuffle(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions());
-        multiChoiceA.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions().get(0));
-        multiChoiceB.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions().get(1));
-        multiChoiceC.setText(MainActivity.QuizQuestionsEasy.get(easyQidx.get(0)).sMultiOptions().get(2));
-
+    public void displayQuizTop(){
+        quizQuestion.setText(selectedQuizQuestions.get(QnA_idx_cnt).getQuestion());
+        Collections.shuffle(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions());
+        multiChoiceA.setText(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions().get(0));
+        multiChoiceB.setText(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions().get(1));
+        multiChoiceC.setText(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions().get(2));
+        QnA_idx_cnt++;
     }
     public List<Integer> pickQuestionsForQuiz(int numOfQuestions, List<QnA_struct> QnA){
         List<Integer> idxQnA = new ArrayList<Integer>();
@@ -94,6 +132,7 @@ public class GameActivity extends AppCompatActivity {
             while(true){
                 if (QnA.get(idx).getHitCounter() == hitCount) {
                     idxQnA.add(idx);
+                    selectedQuizQuestions.add(QnA.get(idx));
                     QnA.get(idx).incHitCounter();
                 }
                 if (QnA.get(idx).getHitCounter() == 6) {
@@ -119,22 +158,10 @@ public class GameActivity extends AppCompatActivity {
 
         int int1gui = MathWorker.int1;
         int int2gui = MathWorker.int2;
-
-        number1 = (TextView)findViewById(R.id.number1);
-        number2 = (TextView)findViewById(R.id.number2);
-        operator = (TextView)findViewById(R.id.operator);
-
         number1.setText(Integer.toString(int1gui));
         number2.setText(Integer.toString(int2gui));
         operator.setText(MathWorker.operator);
-
-//        RadioGroup TXMgroup = new RadioGroup();
-
-        radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
-        radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
-        radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
-        radioButton4 = (RadioButton) findViewById(R.id.radioButton4);
-
+        //        RadioGroup TXMgroup = new RadioGroup();
         radioButton1.setText(Integer.toString(MathWorker.uniqueNumbers.get(0)));
         radioButton2.setText(Integer.toString(MathWorker.uniqueNumbers.get(1)));
         radioButton3.setText(Integer.toString(MathWorker.uniqueNumbers.get(2)));

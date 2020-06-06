@@ -18,6 +18,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private Button Start_game;
+    private static boolean preLoaded= false;
     public static List<QnA_struct> QuizQuestionsEasy;
     public static List<QnA_struct> QuizQuestionsMedium;
     public static List<QnA_struct> QuizQuestionsDifficult;
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadQuizQuestions();
+        if(!preLoaded)
+            loadQuizQuestions();
     }
 
     public void startgame(View view) {
@@ -37,13 +39,14 @@ public class MainActivity extends AppCompatActivity {
     public void loadQuizQuestions()  {
         String jsonCovidQuestionsEasy = loadJSONFromAsset("covid19_questions_easy.json");
         String jsonCovidQuestionsMedium = loadJSONFromAsset("covid19_questions_medium.json");
-        String jsonCovidQuestionsDifficulty = loadJSONFromAsset("covid19_questions_difficutly.json");
+        String jsonCovidQuestionsDifficulty = loadJSONFromAsset("covid19_questions_difficult.json");
 
         Gson gson = new Gson();
         TypeToken<List<QnA_struct>> token = new TypeToken<List<QnA_struct>>() {};
         QuizQuestionsEasy = gson.fromJson(jsonCovidQuestionsEasy, token.getType());
         QuizQuestionsMedium = gson.fromJson(jsonCovidQuestionsMedium, token.getType());
         QuizQuestionsDifficult = gson.fromJson(jsonCovidQuestionsDifficulty, token.getType());
+        preLoaded = true;
     }
 
     public String loadJSONFromAsset(String sfileName) {
