@@ -2,11 +2,15 @@ package com.example.covidinteractive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -37,7 +41,8 @@ public class GameActivity extends AppCompatActivity {
     private RadioButton radioButton2;
     private RadioButton radioButton3;
     private RadioButton radioButton4;
-    private Button submitbutton;
+    private ProgressBar pb;
+
 
     MathWorker MW = new MathWorker();
 
@@ -45,13 +50,25 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        pb = (ProgressBar)findViewById(R.id.progressBar5);
+        /*Animation*/
+        ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100,0);
+        animation.setDuration(5000);
+        animation.setInterpolator(new LinearInterpolator());
+        animation.start();
+
         List<Integer> easyQidx = pickQuestionsForQuiz(6, MainActivity.QuizQuestionsEasy);
         List<Integer> moderateQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsMedium);
 //        List<Integer> difficultQidx = pickQuestionsForQuiz(2, MainActivity.QuizQuestionsDifficult);
 
         displayQuizTop(easyQidx, moderateQidx);
         Mathpartdisplay();
+       // displayProgressBar();
+
+
     }
+
 
     public void displayQuizTop(List<Integer> easyQidx, List<Integer>moderateQidx){
 

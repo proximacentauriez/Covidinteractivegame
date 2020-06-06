@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="@style/MyProgressBarTwo"
+        android:layout_width="375dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:progress="30"
+        android:secondaryProgress="60"
+        android:theme="@style/MyProgressBarTwo"
+        app:layout_constraintBottom_toTopOf="@+id/number1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
@@ -16,8 +32,10 @@
         android:layout_marginBottom="608dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467">
 
         <RadioButton
             android:id="@+id/radioOptionA"
@@ -141,7 +159,7 @@
     <EditText
         android:id="@+id/editText9"
         android:layout_width="381dp"
-        android:layout_height="70dp"
+        android:layout_height="43dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -155,14 +173,13 @@
         android:id="@+id/divider3"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="20dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText11"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <!--    <com.google.android.gms.ads.AdView-->
     <!--        android:id="@+id/adView"-->
@@ -171,31 +188,6 @@
     <!--        app:layout_constraintBottom_toBottomOf="parent"-->
     <!--        app:layout_constraintEnd_toEndOf="parent"-->
     <!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-    <EditText
-        android:id="@+id/editText11"
-        android:layout_width="99dp"
-        android:layout_height="39dp"
-        android:layout_marginEnd="48dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toStartOf="@+id/submitbutton"
-        app:layout_constraintHorizontal_bias="0.418"
-        app:layout_constraintStart_toEndOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/divider3"
-        app:layout_constraintVertical_bias="0.565" />
-
-    <Button
-        android:id="@+id/submitbutton"
-        android:layout_width="117dp"
-        android:layout_height="39dp"
-        android:layout_marginEnd="288dp"
-        android:text="Submit"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider3"
-        app:layout_constraintVertical_bias="0.555" />
 
     <EditText
         android:id="@+id/operator"
