@@ -66,6 +66,7 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
         QnA_idx_cnt =0;
         scoreCounter = 0;
+        selectedQuizQuestions.clear();
         number1 = (TextView)findViewById(R.id.number1);
         number2 = (TextView)findViewById(R.id.number2);
         operator = (TextView)findViewById(R.id.operator);
@@ -156,23 +157,24 @@ public class GameActivity extends AppCompatActivity {
             int idx=0;
             while(true){
                 if (QnA.get(idx).getHitCounter() == hitCount) {
-                    idxQnA.add(idx);
-                    selectedQuizQuestions.add(QnA.get(idx));
-                    QnA.get(idx).incHitCounter();
+                        idxQnA.add(idx);
+                        selectedQuizQuestions.add(QnA.get(idx));
+                        QnA.get(idx).incHitCounter();
                 }
                 if (QnA.get(idx).getHitCounter() == 6) {
-                    hitCount = 0;
                     QnA.get(idx).resetHitCounter();
                 }
-                if(idx == idxQnA.size())
-                    break;
                 if(idxQnA.size() == numOfQuestions)
                     break;
                 idx++;
+                if(idx == QnA.size())
+                    break;
             }
             if(idxQnA.size() == numOfQuestions)
                 break;
             hitCount++;
+            if(hitCount == 6)
+                hitCount = 0;
         }
         return idxQnA;
     }

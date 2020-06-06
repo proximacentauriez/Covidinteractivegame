@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public static List<QnA_struct> QuizQuestionsMedium;
     public static List<QnA_struct> QuizQuestionsDifficult;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
