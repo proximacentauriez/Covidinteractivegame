@@ -16,6 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -45,14 +47,16 @@ public class GameActivity extends AppCompatActivity {
     private RadioButton radioButton4;
     private ProgressBar pb;
     private EditText quizQuestion;
+    private RadioGroup quizRadioGrp;
     private RadioButton multiChoiceA;
     private RadioButton multiChoiceB;
     private RadioButton multiChoiceC;
-    private static final int NO_OF_QUESTIONS = 20;
+    private static final int NO_OF_QUESTIONS = 10;
     private List<Integer> easyQidx,moderateQidx,difficultQidx;
 
     private static List<QnA_struct> selectedQuizQuestions = new ArrayList<QnA_struct>();
     private static int QnA_idx_cnt = 0;
+    private static int scoreCounter = 0;
 
     MathWorker MW = new MathWorker();
 
@@ -60,11 +64,12 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
+        QnA_idx_cnt =0;
+        scoreCounter = 0;
         number1 = (TextView)findViewById(R.id.number1);
         number2 = (TextView)findViewById(R.id.number2);
         operator = (TextView)findViewById(R.id.operator);
-
+        quizRadioGrp = (RadioGroup) findViewById(R.id.radioGroup);
         radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
         radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
         radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
@@ -75,9 +80,9 @@ public class GameActivity extends AppCompatActivity {
         multiChoiceB = (RadioButton) findViewById(R.id.radioOptionB);
         multiChoiceC = (RadioButton) findViewById(R.id.radioOptionC);
 
-        easyQidx = pickQuestionsForQuiz(10, MainActivity.QuizQuestionsEasy);
-        moderateQidx = pickQuestionsForQuiz(5, MainActivity.QuizQuestionsMedium);
-        difficultQidx = pickQuestionsForQuiz(5, MainActivity.QuizQuestionsDifficult);
+        easyQidx = pickQuestionsForQuiz(4, MainActivity.QuizQuestionsEasy);
+        moderateQidx = pickQuestionsForQuiz(3, MainActivity.QuizQuestionsMedium);
+        difficultQidx = pickQuestionsForQuiz(3, MainActivity.QuizQuestionsDifficult);
 
         updateUI();
     }
@@ -87,24 +92,44 @@ public class GameActivity extends AppCompatActivity {
         displayQuizTop();
         Mathpartdisplay();
         displayProgressBar();
-        new CountDownTimer(95000, 5000) {
+        new CountDownTimer(1000000, 5000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (QnA_idx_cnt < NO_OF_QUESTIONS){
-                   displayQuizTop();
+                    validateUserInput();
+                    displayQuizTop();
                     Mathpartdisplay();
                     displayProgressBar();
+                }else if(QnA_idx_cnt == NO_OF_QUESTIONS){
+                    this.cancel();
+                    validateUserInput();
+                    Toast.makeText(GameActivity.this,"Total Q : " + Integer.toString(QnA_idx_cnt)
+                            + " Results : " + Integer.toString(scoreCounter), Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
             @Override
             public void onFinish() {
-                Intent intent = new Intent(GameActivity.this, MainActivity.class);
-                startActivity(intent);
+
             }
         }.start();
 
     }
 
+    public void validateUserInput(){
+        int id = quizRadioGrp.getCheckedRadioButtonId();
+        if(id != -1)
+        {
+            RadioButton userSelection = (RadioButton)findViewById(id);
+            if(userSelection.getText().toString().equalsIgnoreCase(selectedQuizQuestions.get(QnA_idx_cnt-1).getAnswer())){
+
+                scoreCounter++;
+            }
+        }
+        quizRadioGrp.clearCheck();
+
+    }
     public void displayProgressBar() {
          pb =(ProgressBar) findViewById(R.id.progressBar5);
          /*Animation*/
