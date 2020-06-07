@@ -36,30 +36,28 @@
             android:id="@+id/radioOptionA"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             android:checked="false"
-            android:text="  Option A"
+            android:text=" Option A"
             android:textSize="@dimen/_15sdp" />
 
         <RadioButton
             android:id="@+id/radioOptionB"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:checked="false"
-            android:text="   Option B"
-
-            android:textSize="20dp" />
+            android:text=" Option B"
+            android:textSize="@dimen/_15sdp" />
 
         <RadioButton
             android:id="@+id/radioOptionC"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:checked="false"
-            android:text="   Option C"
-
-            android:textSize="20dp" />
+            android:text=" Option C"
+            android:textSize="@dimen/_15sdp" />
 
     </RadioGroup>
 
