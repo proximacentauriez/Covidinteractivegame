@@ -17,7 +17,7 @@ public class MathWorker {
     public static List<Integer> uniqueNumbers = new ArrayList<>();
     
     public void BottomPart() {
-
+        uniqueNumbers.clear();
         int var1, var2;
 
 //        String divide = "/";
@@ -74,39 +74,8 @@ public class MathWorker {
 
             AddNumberToList(ans1);
 
-
         }
-
         Collections.shuffle(uniqueNumbers);
-
-
-//        int opt1 = rand.nextInt(3);
-//        arr[opt1] = ans1;
-//
-//        int opt2 = rand.nextInt(3);
-//
-//        while (opt1 == opt2) {
-//            opt2 = rand.nextInt(3);
-//        }
-//
-//        arr[opt2] = ans2;
-//
-//        int opt3 = rand.nextInt(3);
-//
-//        while ((opt3 == opt2) || (opt1 == opt3) ) {
-//            opt3 = rand.nextInt(3);
-//        }
-//
-//        arr[opt3] = ans3;
-//
-//        int opt4 = rand.nextInt(3);
-//
-//        while ((opt4 == opt2) || (opt1 == opt4) || (opt3 == opt4) ) {
-//            opt4 = rand.nextInt(3);
-//        }
-//
-//        arr[opt4] = answer;
-
     }
 
     public void AddNumberToList(int num)
@@ -114,5 +83,7 @@ public class MathWorker {
         if(!uniqueNumbers.contains(num)) {
             uniqueNumbers.add(num);
         }
+
     }
+
 }

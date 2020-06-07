@@ -9,15 +9,13 @@
     <ProgressBar
         android:id="@+id/progressBar5"
         style="@style/MyProgressBarTwo"
-        android:layout_width="375dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:progress="30"
         android:secondaryProgress="60"
         android:theme="@style/MyProgressBarTwo"
-        app:layout_constraintBottom_toTopOf="@+id/number1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
@@ -26,25 +24,22 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="437dp"
-        android:layout_marginBottom="608dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/_122sdp"
+        android:layout_marginEnd="@dimen/_200sdp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467">
+        app:layout_constraintTop_toBottomOf="@+id/editText9">
 
         <RadioButton
             android:id="@+id/radioOptionA"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:checked="false"
             android:text="  Option A"
-            android:textSize="20dp" />
+            android:textSize="@dimen/_15sdp" />
 
         <RadioButton
             android:id="@+id/radioOptionB"
@@ -82,85 +77,86 @@
 
     <EditText
         android:id="@+id/number1"
-        android:layout_width="108dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_60sdp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/radioButton1"
-        app:layout_constraintEnd_toStartOf="@+id/operator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <EditText
         android:id="@+id/number2"
-        android:layout_width="108dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/radioButton2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/operator"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <RadioButton
         android:id="@+id/radioButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
         android:text="op1"
         app:layout_constraintBottom_toTopOf="@+id/radioButton3"
         app:layout_constraintEnd_toStartOf="@+id/radioButton2"
-        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number1"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintVertical_bias="0.727" />
 
     <RadioButton
         android:id="@+id/radioButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="@dimen/_15sdp"
         android:text="op2"
         app:layout_constraintBottom_toTopOf="@+id/radioButton4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number2"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintVertical_bias="0.727" />
 
     <RadioButton
         android:id="@+id/radioButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="84dp"
         android:text="op3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/radioButton4"
-        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioButton
         android:id="@+id/radioButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="84dp"
         android:text="op4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editText9"
-        android:layout_width="381dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Question"
@@ -171,9 +167,9 @@
 
     <View
         android:id="@+id/divider3"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
@@ -191,15 +187,17 @@
 
     <EditText
         android:id="@+id/operator"
-        android:layout_width="41dp"
-        android:layout_height="36dp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_30sdp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/number2"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toEndOf="@+id/number1"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar5"
+        app:layout_constraintVertical_bias="0.19" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
