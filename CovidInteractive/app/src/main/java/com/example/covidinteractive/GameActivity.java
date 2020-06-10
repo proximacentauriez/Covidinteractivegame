@@ -34,7 +34,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+
 public class GameActivity extends AppCompatActivity {
+
 
     private TextView number1;
     private TextView number2;
@@ -44,7 +46,6 @@ public class GameActivity extends AppCompatActivity {
     private RadioButton radioButton3;
     private RadioButton radioButton4;
     private ProgressBar pb;
-
     private EditText quizQuestion;
     private RadioGroup quizRadioGrp;
     private RadioButton multiChoiceA;
@@ -112,15 +113,6 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
 
-    }
-
-    public void displayQuizTop(){
-
-        EditText quizQuestion = (EditText)findViewById(R.id.editText9);
-        RadioButton multiChoiceA = (RadioButton) findViewById(R.id.radioOptionA);
-        RadioButton multiChoiceB = (RadioButton) findViewById(R.id.radioOptionB);
-        RadioButton multiChoiceC = (RadioButton) findViewById(R.id.radioOptionC);
-
             }
         }.start();
 
@@ -140,12 +132,12 @@ public class GameActivity extends AppCompatActivity {
 
     }
     public void displayProgressBar() {
-         pb =(ProgressBar) findViewById(R.id.progressBar5);
-         /*Animation*/
-         ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100, 0);
-         animation.setDuration(5000);
-         animation.setInterpolator(new LinearInterpolator());
-         animation.start();
+        pb =(ProgressBar) findViewById(R.id.progressBar5);
+        /*Animation*/
+        ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100, 0);
+        animation.setDuration(5000);
+        animation.setInterpolator(new LinearInterpolator());
+        animation.start();
     }
 
     public void displayQuizTop(){
@@ -156,9 +148,7 @@ public class GameActivity extends AppCompatActivity {
         multiChoiceC.setText(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions().get(2));
         QnA_idx_cnt++;
     }
-
     public List<Integer> pickQuestionsForQuiz(int numOfQuestions, List<QnA_struct> QnA){
-
         List<Integer> idxQnA = new ArrayList<Integer>();
         //Fetch Index for Easy Questions
         Collections.shuffle(QnA);
@@ -167,9 +157,9 @@ public class GameActivity extends AppCompatActivity {
             int idx=0;
             while(true){
                 if (QnA.get(idx).getHitCounter() == hitCount) {
-                        idxQnA.add(idx);
-                        selectedQuizQuestions.add(QnA.get(idx));
-                        QnA.get(idx).incHitCounter();
+                    idxQnA.add(idx);
+                    selectedQuizQuestions.add(QnA.get(idx));
+                    QnA.get(idx).incHitCounter();
                 }
                 if (QnA.get(idx).getHitCounter() == 6) {
                     QnA.get(idx).resetHitCounter();
