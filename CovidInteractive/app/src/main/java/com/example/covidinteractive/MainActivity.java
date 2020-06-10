@@ -65,5 +65,10 @@ public class MainActivity extends AppCompatActivity {
         }
         return json;
     }
-
+    @Override
+    public void onBackPressed(){
+        /*
+        Do Nothing
+         */
+    }
 }

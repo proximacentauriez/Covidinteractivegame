@@ -8,6 +8,7 @@ import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
@@ -60,11 +61,12 @@ public class GameActivity extends AppCompatActivity {
     private static int scoreCounter = 0;
 
     MathWorker MW = new MathWorker();
-
+    CountDownTimer timer = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         QnA_idx_cnt =0;
         scoreCounter = 0;
         selectedQuizQuestions.clear();
@@ -95,7 +97,7 @@ public class GameActivity extends AppCompatActivity {
         displayQuizTop();
         Mathpartdisplay();
         displayProgressBar();
-        new CountDownTimer(1000000, 5000) {
+        timer = new CountDownTimer(1000000, 5000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (QnA_idx_cnt < NO_OF_QUESTIONS){
@@ -116,7 +118,8 @@ public class GameActivity extends AppCompatActivity {
             public void onFinish() {
 
             }
-        }.start();
+        };
+        timer.start();
 
     }
 
@@ -199,4 +202,18 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed(){
+        /*
+            Do Nothing
+         */
+    }
+    public void onDestroy() {
+        timer.cancel();
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        this.QnA_idx_cnt =0;
+        this.scoreCounter = 0;
+        this.selectedQuizQuestions.clear();
+        super.onDestroy();
+    }
 }
