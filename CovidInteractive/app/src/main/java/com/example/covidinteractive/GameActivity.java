@@ -41,6 +41,7 @@ public class GameActivity extends AppCompatActivity {
     private TextView number1;
     private TextView number2;
     private TextView operator;
+    private TextView score;
     private RadioButton radioButton1;
     private RadioButton radioButton2;
     private RadioButton radioButton3;
@@ -70,6 +71,7 @@ public class GameActivity extends AppCompatActivity {
         number1 = (TextView)findViewById(R.id.number1);
         number2 = (TextView)findViewById(R.id.number2);
         operator = (TextView)findViewById(R.id.operator);
+        score = (TextView)findViewById(R.id.counter);
         quizRadioGrp = (RadioGroup) findViewById(R.id.radioGroup);
         radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
         radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
@@ -128,6 +130,7 @@ public class GameActivity extends AppCompatActivity {
                 scoreCounter++;
             }
         }
+        score.setText(Integer.toString(scoreCounter));
         quizRadioGrp.clearCheck();
 
     }
