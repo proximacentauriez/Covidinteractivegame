@@ -93,10 +93,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void updateUI() {
-        QnA_idx_cnt++;
-        displayQuizTop();
-        Mathpartdisplay();
-        displayProgressBar();
+        QnA_idx_cnt = 0;
         timer = new CountDownTimer(1000000, 5000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -105,6 +102,7 @@ public class GameActivity extends AppCompatActivity {
                     displayQuizTop();
                     Mathpartdisplay();
                     displayProgressBar();
+                    QnA_idx_cnt++;
                 }else if(QnA_idx_cnt == NO_OF_QUESTIONS){
                     this.cancel();
                     validateUserInput();
@@ -152,7 +150,7 @@ public class GameActivity extends AppCompatActivity {
         multiChoiceA.setText(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions().get(0));
         multiChoiceB.setText(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions().get(1));
         multiChoiceC.setText(selectedQuizQuestions.get(QnA_idx_cnt).sMultiOptions().get(2));
-        QnA_idx_cnt++;
+
     }
     public List<Integer> pickQuestionsForQuiz(int numOfQuestions, List<QnA_struct> QnA){
         List<Integer> idxQnA = new ArrayList<Integer>();
