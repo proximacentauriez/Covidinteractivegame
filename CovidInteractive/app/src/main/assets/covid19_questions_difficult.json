@@ -10,7 +10,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"When did WHO declare COVID-19 as Public Health Emergency of International concern ?",
+      "sQuestion":"When did WHO declare COVID-19 as Public Health Emergency ?",
       "sAnswer":"30th Jan 2020",
       "sMultiOptions":[
          "31st Dec 2019",
@@ -20,22 +20,22 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"How long does COVID-19 virus surview on copper ?",
-      "sAnswer":"upto 4 hour",
+      "sQuestion":"How long does COVID-19 virus survive on copper ?",
+      "sAnswer":"Upto 4 hour",
       "sMultiOptions":[
-         "upto 4 hour",
-         "upto 72 hour",
-         "lessthan 24 hour"
+         "Upto 4 hour",
+         "Upto 72 hour",
+         "Less than 24 hour"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"How long does COVID-19 virus surview on cardboard ?",
-      "sAnswer":"lessthan 24 hour",
+      "sQuestion":"How long does COVID-19 virus survive on cardboard ?",
+      "sAnswer":"Less than 24 hour",
       "sMultiOptions":[
-         "lessthan 24 hour",
-         "upto 72 hour",
-         "upto 4 hour"
+         "Less than 24 hour",
+         "Upto 72 hour",
+         "Upto 4 hour"
       ],
       "iHitCounter":0
    },
@@ -60,12 +60,12 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Pick the right statement from following",
-      "sAnswer":"Drinking methanol and ethanol doesn't cure COVID-19",
+      "sQuestion":"Pick the right statement",
+      "sAnswer":"Drinking methanol doesn't cure COVID-19",
       "sMultiOptions":[
-         "Drinking methanol and ethanol doesn't cure COVID-19",
-         "Drinking methanol and ethanol will cure COVID-19",
-         "Drinking methanol and ethanol will make sure we will not get COVID-19"
+         "Drinking methanol doesn't cure COVID-19",
+         "Drinking methanol will cure COVID-19",
+         "Drinking ethanol will cure COVID-19"
       ],
       "iHitCounter":0
    }

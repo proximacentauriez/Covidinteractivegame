@@ -1,23 +1,13 @@
 [
    {
-      "sQuestion":"what is Global Recovery rate of COVID-19 ?",
-      "sAnswer":"around 80%",
+      "sQuestion":"Global Recovery rate of COVID-19 is ?",
+      "sAnswer":"Around 80%",
       "sMultiOptions":[
-         "around 80%",
-         "around 90%",
-         "around 100%"
+         "Around 80%",
+         "Around 90%",
+         "Around 100%"
       ],
       "iHitCounter":0
-   },
-   {
-	  "sQuestion":"How long does it take to develop symptoms after contracting COVID 19 ?",
-	  "sAnswer":"upto 72 hour",
-	  "sMultiOptions":[
-		 "upto 72 hour",
-		 "upto 4 hour",
-		 "lessthan 24 hour"
-	  ],
-	  "iHitCounter":0
    },
    {
       "sQuestion":"Does Antibiotic help in curing COVID19 ?",
@@ -33,8 +23,8 @@
       "sQuestion":"Following is not symptom of covid 19 ?",
       "sAnswer":"Hair fall",
       "sMultiOptions":[
-         "fatigue",
-         "difficulty in breathe",
+         "Fatigue",
+         "Difficulty in breathe",
          "Hair fall"
       ],
       "iHitCounter":0
@@ -43,19 +33,19 @@
       "sQuestion":"Recommended distance between people to avoid COVID19 ?",
       "sAnswer":"Within 1-2m",
       "sMultiOptions":[
-         "less than 1m",
+         "Less than 1m",
          "Within 1-2m",
-         "close contact"
+         "Close contact"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Whats does SARS stands for ?",
-      "sAnswer":"Severe acute respiratory Syndrome",
+      "sQuestion":"SARS stands for ?",
+      "sAnswer":"Severe Acute Respiratory Syndrome",
       "sMultiOptions":[
-         "Severe acute respiratory Syndrome",
-         "Severe acute reverse Syndrome",
-         "Severe agile respiratory Syndrome"
+         "Severe Acute Respiratory Syndrome",
+         "Severe Acute Reverse Syndrome",
+         "Severe Agile Respiratory Syndrome"
       ],
       "iHitCounter":0
    },
@@ -70,7 +60,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"which of the following animal is high susceptible to COVID19 ?",
+      "sQuestion":"Following animal is high susceptible to COVID19 ?",
       "sAnswer":"CAT",
       "sMultiOptions":[
          "CAT",
@@ -79,8 +69,8 @@
       ],
       "iHitCounter":0
    },
-   {
-      "sQuestion":"Which is highly effected country in Europe due to COVID19 ?",
+   {               
+      "sQuestion":"Most effected country in Europe to COVID19 ?",
       "sAnswer":"ITALY",
       "sMultiOptions":[
          "ITALY",
@@ -90,7 +80,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"will weather play role in spread of COVID-19 ?",
+      "sQuestion":"Will weather play role in spread of COVID-19 ?",
       "sAnswer":"No",
       "sMultiOptions":[
          "Yes",
@@ -115,12 +105,12 @@
       "sMultiOptions":[
          "Drinking Alcohol doesn't cure COVID-19",
          "Drinking Alcohol will cure COVID-19",
-         "Drinking Alcohol will make sure we will not get COVID-19"
+         "Drinking Alcohol protects from COVID-19"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Pick the right statement from following",
+      "sQuestion":"Pick the right statement",
       "sAnswer":"Thermal scanners cannot detect COVID-19",
       "sMultiOptions":[
          "Thermal scanners cannot detect COVID-19",
@@ -130,17 +120,17 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Pick the right statement from following",
-      "sAnswer":"Adding pepper to soup and meal will not help to prevent COVID-19",
+      "sQuestion":"Pick the right statement",
+      "sAnswer":"Pepper usage will not help to prevent COVID-19",
       "sMultiOptions":[
-         "Adding pepper to soup and meal will not help to prevent COVID-19",
-         "Adding pepper to soup and meal will help to prevent COVID-19",
-         "Adding pepper to soup and meal will help to cure COVID-19"
+         "Pepper usage will not help to prevent COVID-19",
+         "Pepper usage will help to prevent COVID-19",
+         "Pepper usage will help to cure COVID-19"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Pick the right statement from following",
+      "sQuestion":"Pick the right statement",
       "sAnswer":"5G mobile network do not spread COVID-19",
       "sMultiOptions":[
          "5G mobile network do not spread COVID-19",
@@ -150,12 +140,13 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Pick the right statement from following",
-      "sAnswer":"COVID 19 can be transmitted in areas with hot and humid climates",
+      "sQuestion":"Pick the right statement",
+				
+      "sAnswer":"Hot and Humid climates doesn't effect COVID-19 transmission",
       "sMultiOptions":[
-         "COVID 19 can be transmitted in areas with hot and humid climates",
-         "COVID 19 cannot be transmitted in areas with hot and humid climates",
-         "hot and humid climates kill COVID 19 virus"
+         "Hot and Humid climates doesn't effect COVID-19 transmission",
+         "Hot and Humid climates effect COVID-19 transmission",
+         "Hot and humid climates kill COVID-19 virus"
       ],
       "iHitCounter":0
    },
