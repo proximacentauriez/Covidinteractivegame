@@ -100,7 +100,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":First name given to corona virus found on Dec 2019 ?",
+      "sQuestion":"First name given to corona virus found on Dec 2019 ?",
       "sAnswer":"2019-nCoV",
       "sMultiOptions":[
          "SARS-CoV-2",
