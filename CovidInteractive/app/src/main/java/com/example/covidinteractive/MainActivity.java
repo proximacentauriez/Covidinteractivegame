@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     public static List<QnA_struct> QuizQuestionsMedium;
     public static List<QnA_struct> QuizQuestionsDifficult;
 
-    private AdView mAdView;
+    private AdView mAdView1;
+    private AdView mAdView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +39,11 @@ public class MainActivity extends AppCompatActivity {
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-        mAdView = findViewById(R.id.adView);
+        mAdView1 = findViewById(R.id.adView1);
+        mAdView2 = findViewById(R.id.adView2);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView1.loadAd(adRequest);
+        mAdView2.loadAd(adRequest);
 
         if(!preLoaded)
             loadQuizQuestions();
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, GameActivity.class);
         startActivity(intent);
     }
+
     public void loadQuizQuestions()  {
         String jsonCovidQuestionsEasy = loadJSONFromAsset("covid19_questions_easy.json");
         String jsonCovidQuestionsMedium = loadJSONFromAsset("covid19_questions_medium.json");

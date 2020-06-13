@@ -35,6 +35,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -56,6 +61,8 @@ public class GameActivity extends AppCompatActivity {
     private static final int NO_OF_QUESTIONS = 10;
     private List<Integer> easyQidx,moderateQidx,difficultQidx;
 
+    private AdView mAdView;
+
     private static List<QnA_struct> selectedQuizQuestions = new ArrayList<QnA_struct>();
     private static int QnA_idx_cnt = 0;
     private static int scoreCounter = 0;
@@ -73,12 +80,12 @@ public class GameActivity extends AppCompatActivity {
         number1 = (TextView)findViewById(R.id.number1);
         number2 = (TextView)findViewById(R.id.number2);
         operator = (TextView)findViewById(R.id.operator);
-        score = (TextView)findViewById(R.id.counter);
+//        score = (TextView)findViewById(R.id.counter);
         quizRadioGrp = (RadioGroup) findViewById(R.id.radioGroup);
         radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
         radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
         radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
-        radioButton4 = (RadioButton) findViewById(R.id.radioButton4);
+
 
         quizQuestion = (EditText)findViewById(R.id.editText9);
         multiChoiceA = (RadioButton) findViewById(R.id.radioOptionA);
@@ -88,6 +95,11 @@ public class GameActivity extends AppCompatActivity {
         easyQidx = pickQuestionsForQuiz(4, MainActivity.QuizQuestionsEasy);
         moderateQidx = pickQuestionsForQuiz(3, MainActivity.QuizQuestionsMedium);
         difficultQidx = pickQuestionsForQuiz(3, MainActivity.QuizQuestionsDifficult);
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         updateUI();
     }
@@ -131,7 +143,7 @@ public class GameActivity extends AppCompatActivity {
                 scoreCounter++;
             }
         }
-        score.setText(Integer.toString(scoreCounter));
+//        score.setText(Integer.toString(scoreCounter));
         quizRadioGrp.clearCheck();
 
     }
@@ -139,7 +151,7 @@ public class GameActivity extends AppCompatActivity {
         pb =(ProgressBar) findViewById(R.id.progressBar5);
         /*Animation*/
         ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100, 0);
-        animation.setDuration(5000);
+        animation.setDuration(8000);
         animation.setInterpolator(new LinearInterpolator());
         animation.start();
     }
@@ -196,7 +208,6 @@ public class GameActivity extends AppCompatActivity {
         radioButton1.setText(Integer.toString(MathWorker.uniqueNumbers.get(0)));
         radioButton2.setText(Integer.toString(MathWorker.uniqueNumbers.get(1)));
         radioButton3.setText(Integer.toString(MathWorker.uniqueNumbers.get(2)));
-        radioButton4.setText(Integer.toString(MathWorker.uniqueNumbers.get(3)));
 
     }
 

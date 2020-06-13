@@ -4,45 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffb3"
+    android:background="@drawable/img3"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/Maintext"
-        android:layout_width="@dimen/_260sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:gravity="center"
-        android:text="Test your multitasking capability"
-        android:textSize="@dimen/_20sdp"
-        app:layout_constraintBottom_toTopOf="@+id/Start_game"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
 
     <Button
         android:id="@+id/Start_game"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_60sdp"
-        android:background="#e68a00"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_200sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="#ffffff"
         android:onClick="startgame"
-        android:text="Start Game"
-        android:textColor="#ffffff"
+        android:text="Play Covid"
+        android:textColor="#e68a00"
         android:textSize="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.603" />
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="375dp"
-        android:layout_height="78dp"
+        android:id="@+id/adView1"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_460sdp"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:layout_marginBottom="-20dp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,11 +46,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.836" />
 
-    <!--        android:id="@+id/adView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView2"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_350sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,7 +46,7 @@ public class MathWorker {
             int2 = rand.nextInt(49);
         }
 
-        int num1 = rand.nextInt(2); // 0, 1, 2
+        int num1 = rand.nextInt(3); // 0, 1, 2
 
         switch(num1)
         {
@@ -68,7 +68,7 @@ public class MathWorker {
         AddNumberToList(answer);
         int ans1 = 0;
         while (true) {
-            if(uniqueNumbers.size() == 4)
+            if(uniqueNumbers.size() == 3)
                 break;
             ans1 = rand.nextInt(99);
 
