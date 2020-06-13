@@ -120,8 +120,6 @@ public class GameActivity extends AppCompatActivity {
                 }else if(QnA_idx_cnt == NO_OF_QUESTIONS){
                     this.cancel();
                     validateUserInput();
-                    Toast.makeText(GameActivity.this,"Total Q : " + Integer.toString(QnA_idx_cnt)
-                            + " Results : " + Integer.toString(scoreCounter), Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(GameActivity.this, ResultActivity.class);
                     startActivity(intent);
                 }
@@ -223,6 +221,8 @@ public class GameActivity extends AppCompatActivity {
         /*
             Do Nothing
          */
+        Toast.makeText(GameActivity.this,"Go Corona!! Dont Quit Now!!", Toast.LENGTH_LONG).show();
+
     }
     public void onDestroy() {
         timer.cancel();
