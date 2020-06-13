@@ -55,6 +55,7 @@ public class GameActivity extends AppCompatActivity {
     private ProgressBar pb;
     private EditText quizQuestion;
     private RadioGroup quizRadioGrp;
+    private RadioGroup mathRadioGrp;
     private RadioButton multiChoiceA;
     private RadioButton multiChoiceB;
     private RadioButton multiChoiceC;
@@ -80,6 +81,7 @@ public class GameActivity extends AppCompatActivity {
         number1 = (TextView)findViewById(R.id.number1);
         number2 = (TextView)findViewById(R.id.number2);
         operator = (TextView)findViewById(R.id.operator);
+        mathRadioGrp = (RadioGroup) findViewById(R.id.radioGroup2);
 //        score = (TextView)findViewById(R.id.counter);
         quizRadioGrp = (RadioGroup) findViewById(R.id.radioGroup);
         radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
@@ -106,7 +108,7 @@ public class GameActivity extends AppCompatActivity {
 
     public void updateUI() {
         QnA_idx_cnt = 0;
-        timer = new CountDownTimer(1000000, 5000) {
+        timer = new CountDownTimer(1000000, 6000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (QnA_idx_cnt < NO_OF_QUESTIONS){
@@ -120,7 +122,7 @@ public class GameActivity extends AppCompatActivity {
                     validateUserInput();
                     Toast.makeText(GameActivity.this,"Total Q : " + Integer.toString(QnA_idx_cnt)
                             + " Results : " + Integer.toString(scoreCounter), Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                    Intent intent = new Intent(GameActivity.this, ResultActivity.class);
                     startActivity(intent);
                 }
             }
@@ -135,23 +137,28 @@ public class GameActivity extends AppCompatActivity {
 
     public void validateUserInput(){
         int id = quizRadioGrp.getCheckedRadioButtonId();
-        if(id != -1)
+        int id_maths = mathRadioGrp.getCheckedRadioButtonId();
+        if(id != -1 && id_maths!= -1)
         {
             RadioButton userSelection = (RadioButton)findViewById(id);
-            if(userSelection.getText().toString().equalsIgnoreCase(selectedQuizQuestions.get(QnA_idx_cnt-1).getAnswer())){
+            RadioButton userMathSelection = (RadioButton)findViewById(id_maths);
+            if((userSelection.getText().toString().equalsIgnoreCase(selectedQuizQuestions.get(QnA_idx_cnt-1).getAnswer()))
+            &&(userMathSelection.getText().toString().equalsIgnoreCase(Integer.toString(MathWorker.answer)))
+            ){
 
                 scoreCounter++;
             }
         }
 //        score.setText(Integer.toString(scoreCounter));
         quizRadioGrp.clearCheck();
+        mathRadioGrp.clearCheck();
 
     }
     public void displayProgressBar() {
         pb =(ProgressBar) findViewById(R.id.progressBar5);
         /*Animation*/
         ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100, 0);
-        animation.setDuration(8000);
+        animation.setDuration(6000);
         animation.setInterpolator(new LinearInterpolator());
         animation.start();
     }

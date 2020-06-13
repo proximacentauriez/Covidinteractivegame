@@ -14,6 +14,8 @@ public class MathWorker {
     public static int answer;
     public static int[] arr = new int[4];
 
+    Random rand = new Random();
+
     public static List<Integer> uniqueNumbers = new ArrayList<>();
     
     public void BottomPart() {
@@ -24,20 +26,18 @@ public class MathWorker {
 
         int Qcounter = 0;
 
-        //  if quiz && math == correct  -> goto next question
-
         MathMethods math = new MathMethods();
         Random rand = new Random();
 
-        if(Qcounter <= 20){
+        if(Qcounter <= 5){
 
             int1 = rand.nextInt(9);
             int2 = rand.nextInt(9);
         }
-        else if(Qcounter > 20 && Qcounter <= 40){
+        else if(Qcounter > 5 && Qcounter <= 10){
 
-            int1 = rand.nextInt(29);
-            int2 = rand.nextInt(29);
+            int1 = rand.nextInt(21);
+            int2 = rand.nextInt(21);
         }
 
         else if(Qcounter > 40 && Qcounter < 60){
@@ -56,6 +56,12 @@ public class MathWorker {
                 break;
 
             case 1:
+                if(int1 < int2){
+                    int temp = 0;
+                    temp = int1;
+                    int1 = int2;
+                    int2 = temp;
+                }
                 answer = math.sub(int1, int2);
                 operator = "-";
                 break;
@@ -66,46 +72,23 @@ public class MathWorker {
                 break;
         }
         AddNumberToList(answer);
-        int ans1 = 0;
+        int ans1 = -1;
         while (true) {
             if(uniqueNumbers.size() == 3)
                 break;
-            ans1 = rand.nextInt(99);
 
-            AddNumberToList(ans1);
+//            ans1 = rand.nextInt(19);
+             // while(ans1 > 0)
 
+            while((ans1 = randInt(answer - 10, answer + 10)) < 0)
+            {
+
+            }
+                AddNumberToList(ans1);
 
         }
 
         Collections.shuffle(uniqueNumbers);
-
-
-//        int opt1 = rand.nextInt(3);
-//        arr[opt1] = ans1;
-//
-//        int opt2 = rand.nextInt(3);
-//
-//        while (opt1 == opt2) {
-//            opt2 = rand.nextInt(3);
-//        }
-//
-//        arr[opt2] = ans2;
-//
-//        int opt3 = rand.nextInt(3);
-//
-//        while ((opt3 == opt2) || (opt1 == opt3) ) {
-//            opt3 = rand.nextInt(3);
-//        }
-//
-//        arr[opt3] = ans3;
-//
-//        int opt4 = rand.nextInt(3);
-//
-//        while ((opt4 == opt2) || (opt1 == opt4) || (opt3 == opt4) ) {
-//            opt4 = rand.nextInt(3);
-//        }
-//
-//        arr[opt4] = answer;
 
     }
 
@@ -115,4 +98,12 @@ public class MathWorker {
             uniqueNumbers.add(num);
         }
     }
+
+    public int randInt(int min, int max) {
+
+        int randomNum = rand.nextInt((max - min) + 1) + min;
+
+        return randomNum;
+    }
+
 }

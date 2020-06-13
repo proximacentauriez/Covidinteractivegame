@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img6"
+    android:background="@drawable/img8"
     tools:context=".GameActivity">
 
     <ProgressBar
@@ -43,6 +43,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:checked="false"
             android:text=" Option A"
+            android:textStyle="bold"
             android:textSize="@dimen/_11sdp" />
 
         <RadioButton
@@ -52,6 +53,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:checked="false"
             android:text=" Option B"
+            android:textStyle="bold"
             android:textSize="@dimen/_11sdp" />
 
         <RadioButton
@@ -61,6 +63,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:checked="false"
             android:text=" Option C"
+            android:textStyle="bold"
             android:textSize="@dimen/_11sdp" />
 
     </RadioGroup>
@@ -70,7 +73,7 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="-20dp"
-        android:background="#ffffff"
+        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +91,7 @@
         android:inputType="number"
         android:background="#000000"
         android:textColor="#ffffff"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -102,6 +106,7 @@
         android:inputType="number"
         android:background="#000000"
         android:textColor="#ffffff"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -126,6 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_1sdp"
             android:text="op1"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/radioButton3"
             app:layout_constraintEnd_toStartOf="@+id/radioButton2"
             app:layout_constraintHorizontal_bias="0.325"
@@ -139,6 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
             android:text="op2"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/radioButton3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/number2"
@@ -150,6 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
             android:text="op3"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/radioButton2"
             app:layout_constraintHorizontal_bias="0.325"
@@ -171,6 +179,7 @@
         android:inputType="textPersonName"
         android:background="#000000"
         android:textColor="#ffffff"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
@@ -181,7 +190,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_1sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:background="#ffffff"
+        android:background="@null"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.588"
@@ -200,7 +209,7 @@
         android:id="@+id/operator"
         android:layout_width="73dp"
         android:layout_height="65dp"
-        android:background="#ffffff"
+        android:background="@null"
         android:editable="false"
         android:ems="10"
         android:gravity="center"
