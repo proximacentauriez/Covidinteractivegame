@@ -66,7 +66,7 @@ public class GameActivity extends AppCompatActivity {
 
     private static List<QnA_struct> selectedQuizQuestions = new ArrayList<QnA_struct>();
     private static int QnA_idx_cnt = 0;
-    private static int scoreCounter = 0;
+    protected static int scoreCounter = 0;
 
     MathWorker MW = new MathWorker();
     CountDownTimer timer = null;

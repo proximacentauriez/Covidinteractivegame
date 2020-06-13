@@ -15,8 +15,15 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-       // cl = (ConstraintLayout)findViewById(R.id.resultid);
-        //cl.setBackground(R.drawable.img8);
+        cl = (ConstraintLayout)findViewById(R.id.resultid);
+        if(GameActivity.scoreCounter > 8){
+            cl.setBackgroundResource(R.drawable.img9);
+        }else if (GameActivity.scoreCounter < 8 && GameActivity.scoreCounter > 6){
+            cl.setBackgroundResource(R.drawable.img11);
+        }else{
+            cl.setBackgroundResource(R.drawable.img10);
+        }
+
     }
 
     public void restartgame(View view) {
