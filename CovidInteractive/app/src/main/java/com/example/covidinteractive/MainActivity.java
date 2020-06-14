@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(!preLoaded)
             loadQuizQuestions();
+
+
     }
 
     public void startgame(View view) {
@@ -83,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return json;
     }
+
+
     @Override
     public void onBackPressed(){
         /*

@@ -47,12 +47,37 @@ public class ResultActivity extends AppCompatActivity {
             cl.setBackgroundResource(R.drawable.img10);
         }
         scoreCounter.setText(Integer.toString((GameActivity.scoreCounter) * 10) + "%");
+
+        View.OnClickListener handler = new View.OnClickListener() {
+            public void onClick(View v) {
+                switch (v.getId()) {
+
+                    case R.id.shareButton:
+                        shareTextUrl();
+                        break;
+                }
+            }
+        };
+        // our buttons
+        findViewById(R.id.shareButton).setOnClickListener(handler);
+
+
     }
 
     public void restartgame(View view) {
 
         Intent intent = new Intent(ResultActivity.this, GameActivity.class);
         startActivity(intent);
+    }
+
+    private void shareTextUrl() {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+        String shareMessage= "\nYou May Be Corona, But We Are HomoSapiens!!We will Beat YoU\n";
+        shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+        startActivity(Intent.createChooser(shareIntent, "choose one"));
     }
 
     @Override

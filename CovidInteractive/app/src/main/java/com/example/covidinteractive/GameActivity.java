@@ -113,7 +113,7 @@ public class GameActivity extends AppCompatActivity {
 
     public void updateUI() {
         QnA_idx_cnt = 0;
-        timer = new CountDownTimer(1000000, 6000) {
+        timer = new CountDownTimer(1000000, 6500) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (QnA_idx_cnt < NO_OF_QUESTIONS){
@@ -161,7 +161,7 @@ public class GameActivity extends AppCompatActivity {
         pb =(ProgressBar) findViewById(R.id.progressBar5);
         /*Animation*/
         ObjectAnimator animation = ObjectAnimator.ofInt(pb, "progress", 100, 0);
-        animation.setDuration(6000);
+        animation.setDuration(6500);
         animation.setInterpolator(new LinearInterpolator());
         animation.start();
     }
