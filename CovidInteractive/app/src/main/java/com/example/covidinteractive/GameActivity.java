@@ -70,6 +70,7 @@ public class GameActivity extends AppCompatActivity {
 
     MathWorker MW = new MathWorker();
     CountDownTimer timer = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,8 +80,11 @@ public class GameActivity extends AppCompatActivity {
         scoreCounter = 0;
         selectedQuizQuestions.clear();
         number1 = (TextView)findViewById(R.id.number1);
+        number1.setEnabled(false);
         number2 = (TextView)findViewById(R.id.number2);
+        number2.setEnabled(false);
         operator = (TextView)findViewById(R.id.operator);
+        operator.setEnabled(false);
         mathRadioGrp = (RadioGroup) findViewById(R.id.radioGroup2);
 //        score = (TextView)findViewById(R.id.counter);
         quizRadioGrp = (RadioGroup) findViewById(R.id.radioGroup);

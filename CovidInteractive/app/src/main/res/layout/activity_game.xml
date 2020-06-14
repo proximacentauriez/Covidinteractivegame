@@ -92,6 +92,7 @@
         android:background="#000000"
         android:textColor="#ffffff"
         android:textStyle="bold"
+        android:editable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -107,6 +108,7 @@
         android:background="#000000"
         android:textColor="#ffffff"
         android:textStyle="bold"
+        android:editable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -169,7 +171,7 @@
         android:id="@+id/editText9"
         android:layout_width="@dimen/_300sdp"
         android:layout_height="@dimen/_35sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
@@ -197,14 +199,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-    <!--    <com.google.android.gms.ads.AdView-->
-    <!--        android:id="@+id/adView"-->
-    <!--        android:layout_width="396dp"-->
-    <!--        android:layout_height="66dp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent" />-->
-
     <EditText
         android:id="@+id/operator"
         android:layout_width="73dp"
@@ -215,6 +209,7 @@
         android:gravity="center"
         android:inputType="textPersonName"
         android:text=""
+        android:textColor="#000000"
         android:textSize="@dimen/_50sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/number2"
@@ -225,14 +220,14 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
-        android:layout_width="@dimen/_300sdp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_350sdp"
         android:layout_marginEnd="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintBottom_toBottomOf="parent"
