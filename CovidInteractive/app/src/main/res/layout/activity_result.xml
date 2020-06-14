@@ -25,8 +25,8 @@
         android:id="@+id/scoreval"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_1sdp"
-        android:layout_marginBottom="@dimen/_240sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_310sdp"
         android:background="@null"
         android:ems="10"
         android:gravity="center"
@@ -44,19 +44,18 @@
         android:id="@+id/button"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_320sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
         android:background="#ffffff"
         android:onClick="restartgame"
         android:text="Battle Again"
-        android:textStyle="italic|bold"
         android:textColor="#000000"
         android:textSize="@dimen/_20sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/adView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView4"
@@ -65,17 +64,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_350sdp"
         android:layout_marginEnd="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView5"

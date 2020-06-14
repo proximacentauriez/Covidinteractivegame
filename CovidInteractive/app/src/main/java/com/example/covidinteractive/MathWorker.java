@@ -68,7 +68,7 @@ public class MathWorker {
 
             case 2:
                 answer = math.mul(int1, int2);
-                operator = "*";
+                operator = "x";
                 break;
         }
         AddNumberToList(answer);
