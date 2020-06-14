@@ -94,6 +94,7 @@ public class GameActivity extends AppCompatActivity {
 
 
         quizQuestion = (EditText)findViewById(R.id.editText9);
+        quizQuestion.setEnabled(false);
         multiChoiceA = (RadioButton) findViewById(R.id.radioOptionA);
         multiChoiceB = (RadioButton) findViewById(R.id.radioOptionB);
         multiChoiceC = (RadioButton) findViewById(R.id.radioOptionC);
