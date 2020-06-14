@@ -1,17 +1,13 @@
-package com.example.covidinteractive;
+package com.proxima.covidinteractive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.WindowManager;
-import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
@@ -19,25 +15,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -62,7 +43,7 @@ public class GameActivity extends AppCompatActivity {
     private static final int NO_OF_QUESTIONS = 10;
     private List<Integer> easyQidx,moderateQidx,difficultQidx;
 
-    private AdView mAdView;
+    private AdView mAdView3;
 
     private static List<QnA_struct> selectedQuizQuestions = new ArrayList<QnA_struct>();
     private static int QnA_idx_cnt = 0;
@@ -103,9 +84,9 @@ public class GameActivity extends AppCompatActivity {
         moderateQidx = pickQuestionsForQuiz(3, MainActivity.QuizQuestionsMedium);
         difficultQidx = pickQuestionsForQuiz(3, MainActivity.QuizQuestionsDifficult);
 
-        mAdView = findViewById(R.id.adView);
+        mAdView3 = findViewById(R.id.adView3);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView3.loadAd(adRequest);
 
 
         updateUI();

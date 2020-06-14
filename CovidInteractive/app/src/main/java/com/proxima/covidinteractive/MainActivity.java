@@ -1,4 +1,4 @@
-package com.example.covidinteractive;
+package com.proxima.covidinteractive;
 
 import androidx.appcompat.app.AppCompatActivity;
 

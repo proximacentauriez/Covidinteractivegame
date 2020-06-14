@@ -1,4 +1,4 @@
-package com.example.covidinteractive;
+package com.proxima.covidinteractive;
 
 import org.junit.Test;
 

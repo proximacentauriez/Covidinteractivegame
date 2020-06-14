@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.covidinteractive">
+    package="com.proxima.covidinteractive"
+    android:versionCode= "1"
+    android:versionName="proxima">
 
     <supports-screens
         android:largeScreens="true"
@@ -18,10 +20,10 @@
         <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
-        <activity android:name=".ResultActivity"></activity>
-        <activity android:name=".GameActivity" />
-        <activity android:name=".MainActivity"
+            android:value="ca-app-pub-8112552218096927~8978856763"/>
+        <activity android:name="com.proxima.covidinteractive.ResultActivity"></activity>
+        <activity android:name="com.proxima.covidinteractive.GameActivity" />
+        <activity android:name="com.proxima.covidinteractive.MainActivity"
             android:screenOrientation="portrait">
 <!--            android:configChanges="keyboardHidden|orientation">-->
             <intent-filter>
@@ -30,6 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

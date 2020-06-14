@@ -1,6 +1,4 @@
-package com.example.covidinteractive;
-
-import java.util.Random;
+package com.proxima.covidinteractive;
 
 public class MathMethods {
 
