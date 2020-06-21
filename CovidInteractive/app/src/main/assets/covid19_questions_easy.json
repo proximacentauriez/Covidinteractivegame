@@ -1,6 +1,6 @@
 [
    {
-      "sQuestion":"COVID originated from ?",
+      "sQuestion":"Latest pandemic originated from ?",
       "sAnswer":"Wuhan",
       "sMultiOptions":[
          "Wuhan",
@@ -10,17 +10,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Name the virus reported on 31st Dec 2019 to WHO ?",
-      "sAnswer":"COVID19",
-      "sMultiOptions":[
-         "COVID19",
-         "COVID20",
-         "COVID18"
-      ],
-      "iHitCounter":0
-   },
-   {
-      "sQuestion":"COVID19 virus will not spread by ?",
+      "sQuestion":"Latest pandemic will not spread by ?",
       "sAnswer":"Social Distancing",
       "sMultiOptions":[
          "Social Distancing",
@@ -30,7 +20,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"General Incubation period of COVID19 ?",
+      "sQuestion":"General Incubation period of latest pandemic ?",
       "sAnswer":"Range of 1-14 days",
       "sMultiOptions":[
          "Range of 1-14 days",
@@ -40,7 +30,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Which is not symptom the of COVID19 ?",
+      "sQuestion":"Which is not symptom the of latest pandemic ?",
       "sAnswer":"Heart-Attack",
       "sMultiOptions":[
          "Pneumonia",
@@ -50,7 +40,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Following method spreads COVID19 ?",
+      "sQuestion":"Following method spreads latest pandemic ?",
       "sAnswer":"Hugging",
       "sMultiOptions":[
          "Hugging",
@@ -60,7 +50,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Which country has More COVID case as of May ?",
+      "sQuestion":"Which country has More lastest pandemic case as of May ?",
       "sAnswer":"USA",
       "sMultiOptions":[
          "USA",
@@ -70,17 +60,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"COVID stands for ?",
-      "sAnswer":"Corona Virus Disease",
-      "sMultiOptions":[
-         "Corona Virus Disease",
-         "Combo Virus Disease",
-         "Corona Virtual Disease"
-      ],
-      "iHitCounter":0
-   },
-   {
-      "sQuestion":"Can people recover from COVID19 ?",
+      "sQuestion":"Can people recover from lastest pandemic ?",
       "sAnswer":"Yes",
       "sMultiOptions":[
          "Yes",
@@ -90,7 +70,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Who names COVID19 ?",
+      "sQuestion":"Who names pandemic ?",
       "sAnswer":"WHO",
       "sMultiOptions":[
          "WHO",
@@ -100,7 +80,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"First name given to corona virus found on Dec 2019 ?",
+      "sQuestion":"First name given to pandemic found on Dec 2019 ?",
       "sAnswer":"2019-nCoV",
       "sMultiOptions":[
          "SARS-CoV-2",
@@ -110,7 +90,7 @@
       "iHitCounter":0
    },
    {			   
-      "sQuestion":"Precaution to be taken in market to avoid COVID-19 ?",
+      "sQuestion":"Precaution to be taken in market to avoid pandemic ?",
       "sAnswer":"Use of Mask",
       "sMultiOptions":[
          "Use of Shoes",
@@ -120,7 +100,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"In which country COVID19 case was initially found ?",
+      "sQuestion":"In which country lastest pandemic case was initially found ?",
       "sAnswer":"CHINA",
       "sMultiOptions":[
          "USA",
@@ -130,7 +110,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Precaution to be taken in public places to avoid COVID-19 ?",
+      "sQuestion":"Precaution to be taken in public places to avoid lastest pandemic ?",
       "sAnswer":"Social Distancing",
       "sMultiOptions":[
          "Social distancing",
@@ -151,16 +131,16 @@
    },
    {
       "sQuestion":"Pick the right statement from following",
-      "sAnswer":"Most people who get COVID19 will recover from it",
+      "sAnswer":"Most people who get latest pandemic will recover from it",
       "sMultiOptions":[
-         "People who get COVID19 will die",
-         "Most people who get COVID19 will recover from it",
-         "People who get COVID19 will suffer lifelong"
+         "People who get lastest pandemic will die",
+         "Most people who get lastest pandemic will recover from it",
+         "People who get lastest pandemic will suffer lifelong"
       ],
       "iHitCounter":0
    },
    {
-      "sQuestion":"Use of Hand driers will kill COVID19 Virus ?",
+      "sQuestion":"Use of Hand driers will kill lastest pandemic Virus ?",
       "sAnswer":"Yes",
       "sMultiOptions":[
          "Yes",

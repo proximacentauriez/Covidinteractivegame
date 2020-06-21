@@ -1,6 +1,6 @@
 [
    {
-      "sQuestion":"Global Recovery rate of COVID-19 is ?",
+      "sQuestion":"Global Recovery rate of latest pandemic is ?",
       "sAnswer":"Around 80%",
       "sMultiOptions":[
          "Around 80%",
@@ -10,7 +10,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Does Antibiotic help in curing COVID19 ?",
+      "sQuestion":"Does Antibiotic help in curing latest pandemic ?",
       "sAnswer":"No",
       "sMultiOptions":[
          "No",
@@ -20,7 +20,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Following is not symptom of covid 19 ?",
+      "sQuestion":"Following is not symptom of latest pandemic ?",
       "sAnswer":"Hair fall",
       "sMultiOptions":[
          "Fatigue",
@@ -30,7 +30,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Recommended distance between people to avoid COVID19 ?",
+      "sQuestion":"Recommended distance between people to avoid latest pandemic ?",
       "sAnswer":"Within 1-2m",
       "sMultiOptions":[
          "Less than 1m",
@@ -50,7 +50,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"what is COVID ?",
+      "sQuestion":"what is latest pandemic caused by ?",
       "sAnswer":"Virus",
       "sMultiOptions":[
          "Virus",
@@ -60,7 +60,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Following animal is high susceptible to COVID19 ?",
+      "sQuestion":"Following animal is high susceptible to latest pandemic ?",
       "sAnswer":"CAT",
       "sMultiOptions":[
          "CAT",
@@ -70,7 +70,7 @@
       "iHitCounter":0
    },
    {               
-      "sQuestion":"Most effected country in Europe to COVID19 ?",
+      "sQuestion":"Most effected country in Europe to latest pandemic ?",
       "sAnswer":"ITALY",
       "sMultiOptions":[
          "ITALY",
@@ -80,7 +80,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Will weather play role in spread of COVID-19 ?",
+      "sQuestion":"Will weather play role in spread of latest pandemic ?",
       "sAnswer":"No",
       "sMultiOptions":[
          "Yes",
@@ -90,7 +90,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"will weather play role in spread of COVID-19 ?",
+      "sQuestion":"will weather play role in spread of latest pandemic ?",
       "sAnswer":"No",
       "sMultiOptions":[
          "Yes",
@@ -101,62 +101,51 @@
    },
    {
       "sQuestion":"Pick the right statement from following",
-      "sAnswer":"Drinking Alcohol doesn't cure COVID-19",
+      "sAnswer":"Drinking Alcohol doesn't cure latest pandemic",
       "sMultiOptions":[
-         "Drinking Alcohol doesn't cure COVID-19",
-         "Drinking Alcohol will cure COVID-19",
-         "Drinking Alcohol protects from COVID-19"
+         "Drinking Alcohol doesn't cure latest pandemic",
+         "Drinking Alcohol will cure latest pandemic",
+         "Drinking Alcohol protects from latest pandemic"
       ],
       "iHitCounter":0
    },
    {
       "sQuestion":"Pick the right statement",
-      "sAnswer":"Thermal scanners cannot detect COVID-19",
+      "sAnswer":"Thermal scanners cannot detect latest pandemic",
       "sMultiOptions":[
-         "Thermal scanners cannot detect COVID-19",
-         "Thermal scanners will detect COVID-19",
-         "Thermal scanners will detect and cure COVID-19"
+         "Thermal scanners cannot detect latest pandemic",
+         "Thermal scanners will detect latest pandemic",
+         "Thermal scanners will detect and cure latest pandemic"
       ],
       "iHitCounter":0
    },
    {
       "sQuestion":"Pick the right statement",
-      "sAnswer":"Pepper usage will not help to prevent COVID-19",
+      "sAnswer":"Pepper usage will not help to prevent latest pandemic",
       "sMultiOptions":[
-         "Pepper usage will not help to prevent COVID-19",
-         "Pepper usage will help to prevent COVID-19",
-         "Pepper usage will help to cure COVID-19"
+         "Pepper usage will not help to prevent latest pandemic",
+         "Pepper usage will help to prevent latest pandemic",
+         "Pepper usage will help to cure latest pandemic"
       ],
       "iHitCounter":0
    },
    {
       "sQuestion":"Pick the right statement",
-      "sAnswer":"5G mobile network do not spread COVID-19",
+      "sAnswer":"5G mobile network do not spread latest pandemic",
       "sMultiOptions":[
-         "5G mobile network do not spread COVID-19",
-         "5G mobile network will spread COVID-19",
-         "5G mobile network will help grow COVID-19"
-      ],
-      "iHitCounter":0
-   },
-   {
-      "sQuestion":"Pick the right statement",
-				
-      "sAnswer":"Hot and Humid climates doesn't effect COVID-19 transmission",
-      "sMultiOptions":[
-         "Hot and Humid climates doesn't effect COVID-19 transmission",
-         "Hot and Humid climates effect COVID-19 transmission",
-         "Hot and humid climates kill COVID-19 virus"
+         "5G mobile network do not spread latest pandemic",
+         "5G mobile network will spread latest pandemic",
+         "5G mobile network will help grow latest pandemic"
       ],
       "iHitCounter":0
    },
    {
       "sQuestion":"Pick the right statement from following",
-      "sAnswer":"Cold weather and snow cannot kill the COVID19 virus",
+      "sAnswer":"Cold weather and snow cannot kill the latest pandemic virus",
       "sMultiOptions":[
-         "Cold weather and snow cannot kill the COVID19 virus",
-         "Cold weather and snow can kill the COVID19 virus",
-         "Cold weather and snow breed the COVID19 virus"
+         "Cold weather and snow cannot kill the latest pandemic virus",
+         "Cold weather and snow can kill the latest pandemic virus",
+         "Cold weather and snow breed the latest pandemic virus"
       ],
       "iHitCounter":0
    }

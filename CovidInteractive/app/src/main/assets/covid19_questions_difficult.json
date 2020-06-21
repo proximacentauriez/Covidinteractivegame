@@ -1,6 +1,6 @@
 [
    {
-      "sQuestion":"When was COVID-19 first reported to WHO ?",
+      "sQuestion":"When was latest pandemic first reported to WHO ?",
       "sAnswer":"31st Dec 2019",
       "sMultiOptions":[
          "31st Dec 2019",
@@ -10,7 +10,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"When did WHO declare COVID-19 as Public Health Emergency ?",
+      "sQuestion":"When did WHO declare latest pandemic as Public Health Emergency ?",
       "sAnswer":"30th Jan 2020",
       "sMultiOptions":[
          "31st Dec 2019",
@@ -20,7 +20,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"How long does COVID-19 virus survive on copper ?",
+      "sQuestion":"How long does latest pandemic virus survive on copper ?",
       "sAnswer":"Upto 4 hour",
       "sMultiOptions":[
          "Upto 4 hour",
@@ -30,7 +30,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"How long does COVID-19 virus survive on cardboard ?",
+      "sQuestion":"How long does latest pandemic virus survive on cardboard ?",
       "sAnswer":"Less than 24 hour",
       "sMultiOptions":[
          "Less than 24 hour",
@@ -40,7 +40,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"what is the name of Virus that causes COVID19 ?",
+      "sQuestion":"what is the name of Virus that causes latest pandemic ?",
       "sAnswer":"SARS-CoV-2",
       "sMultiOptions":[
          "SARS-CoV-2",
@@ -50,7 +50,7 @@
       "iHitCounter":0
    },
    {
-      "sQuestion":"Who is the First Doctor to warn on COVID-19 ?",
+      "sQuestion":"Who is the First Doctor to warn on latest pandemic ?",
       "sAnswer":"LI-Wenliang",
       "sMultiOptions":[
          "LI-Wenliang",
@@ -61,11 +61,11 @@
    },
    {
       "sQuestion":"Pick the right statement",
-      "sAnswer":"Drinking methanol doesn't cure COVID-19",
+      "sAnswer":"Drinking methanol doesn't cure latest pandemic",
       "sMultiOptions":[
-         "Drinking methanol doesn't cure COVID-19",
-         "Drinking methanol will cure COVID-19",
-         "Drinking ethanol will cure COVID-19"
+         "Drinking methanol doesn't cure latest pandemic",
+         "Drinking methanol will cure latest pandemic",
+         "Drinking ethanol will cure latest pandemic"
       ],
       "iHitCounter":0
    }
