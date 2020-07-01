@@ -1,4 +1,4 @@
-package com.proxima.covidinteractive;
+package com.proxima.gameinteractive;
 
 public class MathMethods {
 

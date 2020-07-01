@@ -1,4 +1,4 @@
-package com.proxima.covidinteractive;
+package com.proxima.gameinteractive;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.firebase.BuildConfig;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -74,7 +75,7 @@ public class ResultActivity extends AppCompatActivity {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
         shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
-        String shareMessage= "\nYou May Be Corona, But We Are HomoSapiens!!We will Beat YoU\n";
+        String shareMessage= "\nYou May Be Alien, But We Are HomoSapiens!!We will Beat YoU\n";
         shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
         shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
         startActivity(Intent.createChooser(shareIntent, "choose one"));

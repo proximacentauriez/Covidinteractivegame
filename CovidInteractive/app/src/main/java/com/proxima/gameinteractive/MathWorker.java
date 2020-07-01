@@ -1,4 +1,4 @@
-package com.proxima.covidinteractive;
+package com.proxima.gameinteractive;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.proxima.covidinteractive;
+package com.proxima.gameinteractive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -58,15 +58,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadQuizQuestions()  {
-        String jsonCovidQuestionsEasy = loadJSONFromAsset("covid19_questions_easy.json");
-        String jsonCovidQuestionsMedium = loadJSONFromAsset("covid19_questions_medium.json");
-        String jsonCovidQuestionsDifficulty = loadJSONFromAsset("covid19_questions_difficult.json");
+        String jsonGameQuestionsEasy = loadJSONFromAsset("game_questions_easy.json");
+        String jsonGameQuestionsMedium = loadJSONFromAsset("game_questions_medium.json");
+        String jsonGameQuestionsDifficulty = loadJSONFromAsset("game_questions_difficult.json");
 
         Gson gson = new Gson();
         TypeToken<List<QnA_struct>> token = new TypeToken<List<QnA_struct>>() {};
-        QuizQuestionsEasy = gson.fromJson(jsonCovidQuestionsEasy, token.getType());
-        QuizQuestionsMedium = gson.fromJson(jsonCovidQuestionsMedium, token.getType());
-        QuizQuestionsDifficult = gson.fromJson(jsonCovidQuestionsDifficulty, token.getType());
+        QuizQuestionsEasy = gson.fromJson(jsonGameQuestionsEasy, token.getType());
+        QuizQuestionsMedium = gson.fromJson(jsonGameQuestionsMedium, token.getType());
+        QuizQuestionsDifficult = gson.fromJson(jsonGameQuestionsDifficulty, token.getType());
         preLoaded = true;
     }
 

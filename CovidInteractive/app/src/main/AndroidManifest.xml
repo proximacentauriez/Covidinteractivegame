@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.proxima.covidinteractive"
+    package="com.proxima.gameinteractive"
     android:versionCode= "1"
     android:versionName="proxima">
 
@@ -21,9 +21,9 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8112552218096927~8978856763"/>
-        <activity android:name="com.proxima.covidinteractive.ResultActivity"></activity>
-        <activity android:name="com.proxima.covidinteractive.GameActivity" />
-        <activity android:name="com.proxima.covidinteractive.MainActivity"
+        <activity android:name="com.proxima.gameinteractive.ResultActivity"></activity>
+        <activity android:name="com.proxima.gameinteractive.GameActivity" />
+        <activity android:name="com.proxima.gameinteractive.MainActivity"
             android:screenOrientation="portrait">
 <!--            android:configChanges="keyboardHidden|orientation">-->
             <intent-filter>

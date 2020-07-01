@@ -1,4 +1,4 @@
-package com.proxima.covidinteractive;
+package com.proxima.gameinteractive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -207,7 +207,7 @@ public class GameActivity extends AppCompatActivity {
         /*
             Do Nothing
          */
-        Toast.makeText(GameActivity.this,"Go Corona!! Dont Quit Now!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(GameActivity.this,"Go Go!! Dont Quit Now!!", Toast.LENGTH_LONG).show();
 
     }
     public void onDestroy() {
